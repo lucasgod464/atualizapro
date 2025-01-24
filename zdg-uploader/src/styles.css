@@ -1,0 +1,157 @@
+/* styles.css */
+    :root {
+        --primary-color: #3498db;
+        --text-color: #333;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: var(--text-color);
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+
+    .menu {
+        flex-grow: 1;
+    }
+
+    .menu-item {
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-item i {
+        margin-right: 10px;
+    }
+
+    .menu-item:hover, .menu-item.active {
+        background-color: #34495e;
+    }
+
+    .main-content {
+        flex-grow: 1;
+        padding: 20px;
+    }
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .upload-section {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .folder-select {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .folder-select input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .server-select {
+        margin-bottom: 20px;
+    }
+
+    .server-select select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .upload-progress {
+        margin: 20px 0;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 10px;
+        background: #eee;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress {
+        width: 0%;
+        height: 100%;
+        background: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+
+    .logs {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .log-content {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 0.9em;
+        background-color: #f9f9f9;
+    }
+    .log-entry {
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 3px;
+    }
+    .log-entry.error {
+        background-color: #ffebee;
+        color: #f44336;
+    }
+    .log-entry.success {
+        background-color: #e8f5e9;
+        color: #4caf50;
+    }
+    .btn.secondary {
+        background-color: #f5f5f5;
+        color: var(--text-color);
+    }
+
+    .btn.secondary:hover {
+        background-color: #e0e0e0;
+    }
+
+    .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }

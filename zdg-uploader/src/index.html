@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>ZDG File Uploader</title>
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Logo ZDG">
+                </div>
+                <div class="menu">
+                    <div class="menu-item active">
+                        <i class="mdi mdi-folder-upload"></i>
+                        <span>Upload de Arquivos</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="mdi mdi-server"></i>
+                        <span>Servidores</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="mdi mdi-history"></i>
+                        <span>Histórico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="header">
+                    <h1>Upload de Arquivos para VPS</h1>
+                </div>
+
+                <div class="upload-section">
+                    <div class="folder-select">
+                        <input type="text" id="folderPath" readonly placeholder="Selecione uma pasta...">
+                        <button class="btn secondary" id="selectFolder">
+                            <i class="mdi mdi-folder"></i>
+                            Escolher Pasta
+                        </button>
+                    </div>
+
+                    <div class="server-select">
+                        <h3>Servidor de Destino</h3>
+                        <select id="serverSelect">
+                            <option value="">Selecione um servidor...</option>
+                        </select>
+                    </div>
+
+                    <div class="upload-progress" style="display: none;">
+                        <div class="progress-bar">
+                            <div class="progress" id="progressBar"></div>
+                        </div>
+                        <span id="progressText">0%</span>
+                    </div>
+
+                    <button class="btn primary" id="uploadButton" disabled>
+                        <i class="mdi mdi-upload"></i>
+                        Iniciar Upload
+                    </button>
+                </div>
+
+                <div class="logs">
+                    <h3>Logs de Upload</h3>
+                    <div class="log-content" id="logContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="renderer.js"></script>
+    </body>
+    </html>
